@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <sql-query name="TablesNames">
+        SHOW TABLES FROM Vehicles;
+    </sql-query>
+    <sql-query name="DBSize">
+        USE Vehicles
+        EXEC sp_spaceused
+    </sql-query>
+    <sql-query name="UserCount">
+
+    </sql-query>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+#Root logger option
+log4j.rootLogger=DEBUG, stdout
+#  , file
+
+log4j.logger.com.buses=DEBUG
+#  , file
+#Direct log messages to stdout console appender
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+### direct messages to file
+log4j.appender.FileApp =org.apache.log4j.RollingFileAppender
+log4j.appender.FileApp.File=file
+log4j.appender.FileApp.append=true
+log4j.appender.FileApp.MaxFileSize=500KB
+log4j.appender.FileApp.MaxBackupIndex=2
+log4j.appender.FileApp.immediateFlush=true
+log4j.appender.FileApp.layout=org.apache.log4j.PatternLayout
+log4j.appender.FileApp.layout.ConversionPattern=%d{MM.dd:HH.mm.ss}%5p\t%c:%L - %m%n
